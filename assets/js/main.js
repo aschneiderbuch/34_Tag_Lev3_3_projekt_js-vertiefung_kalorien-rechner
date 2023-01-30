@@ -93,7 +93,7 @@ if(radio_männlich.checked){
     console.log(ergebnis)
 
     console.log(liste.value);
-    let gesErgebnis = Number(ergebnis) * Number(liste.value);
+    let gesErgebnis = (Number(ergebnis) * Number(liste.value)).toFixed(2);
     console.log(gesErgebnis);
 
     grundumsatzKcal.innerHTML = `Grundumsatz ${ergebnis} in kcal`;
@@ -101,4 +101,16 @@ if(radio_männlich.checked){
 
     gesamtumsatzKcal.innerHTML = `Gesamtumsatz ${gesErgebnis} in kcal`;
     gesamtumsatzKJ.innerHTML = `Gesamtumsatz ${(gesErgebnis * 4.184).toFixed(2)} in kJ`;
+}
+else if (radio_weiblich.checked){
+    let ergebnis = (655.1 + Number(gewicht.value) *9.6 + Number(körpergröße.value)*1.8 + Number(alter.value)*4.7).toFixed(2);
+let gesErgebnis = (Number(ergebnis) * Number(liste.value)).toFixed(2);
+
+grundumsatzKcal.innerHTML = `Grundumsatz ${ergebnis} in kcal`;
+grundumsatzKJ.innerHTML = `Grundumsatz ${(ergebnis *4.184).toFixed(2)} in kJ`;
+
+gesamtumsatzKcal.innerHTML = `Gesamtumsatz ${gesErgebnis} in kacl`;
+gesamtumsatzKJ.innerHTML = `Gesamtumsatz ${(gesErgebnis *4.184).toFixed(2)} in kJ`;
+
 }};
+
