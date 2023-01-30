@@ -50,7 +50,7 @@ Ausgabe
 
 
 
-// Variablen
+// Variablen input
 let körpergröße = document.querySelector("#körpergröße");
 let alter = document.querySelector("#alter");
 let gewicht = document.querySelector("#gewicht");
@@ -66,34 +66,28 @@ let button = document.querySelector("#button");
 // EventListener
 button.addEventListener("click", werteBerechnen );
 
-liste.addEventListener("change", ausListeAuslesen );
+liste.addEventListener("change", (event) => {console.log(event.target.value)} );
 
-let wertAusListe = "";
-console.log(wertAusListe);
 
- 
-// Funktion
-function ausListeAuslesen(event){
-    
-    console.log("event.target.value" + event.target.value);
-let wert = event.target.value; // Value 0,95 bis 2,2 von select Liste auslesen
-    wertAusListe = wert 
-    console.log("WertAusListe: " + wertAusListe);
-console.log("Wert: " + wert);
-return wert;
-};
+// Output
 
-console.log(wertAusListe);    // hier kommt nur 0 an
+let grundumstatzKcal = document.querySelector("#grundumstatzKcal");
+let grundumsatzKJ = document.querySelector("#grundumsatzKJ");
+
+let gesamtumsatzKcal = document.querySelector("#gesamtumsatzKcal");
+let gesamtumsatzKJ = document.querySelector("#gesamtumsatzKJ");
+
+
+
 
 // Funktion 
 function werteBerechnen(){
-console.log("event Listener geht");
-console.log("wertAusliste: " + wertAusListe); // geht 0,95 bis 2,2
 
-let wert = ausListeAuslesen();
-console.log(wert);
+    // ! wird zu false damit
+if (!(körpergröße.value >0 && alter.value > 0 && gewicht.value > 0 && liste.vale >0 && (radio_männlich.checked || radio_weiblich.checked))){
+    return;
+}
 
-if (körpergröße.value >0 && alter.value > 0 && gewicht.value > 0 && (radio_männlich.checked || radio_weiblich.checked)){
-    console.log("prüfung geht ohne liste")};
+
 
 };
