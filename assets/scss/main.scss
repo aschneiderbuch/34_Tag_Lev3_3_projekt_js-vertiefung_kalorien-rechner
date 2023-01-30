@@ -7,38 +7,40 @@ h1 {
     margin: 0;
     box-sizing: border-box;
 }
-    html {
-        max-width: 1440px;
-        margin:  auto;
+
+html {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 20vh;
+
+    form {
+        background-color: orange;
+        overflow: hidden;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        width: 20vw;
+        padding: 30px;
+        border-radius: 20px;
 
-padding-top: 20vh;
-
-        form {
-            background-color: orange;
-            overflow: hidden;
+        article {
             display: flex;
             flex-direction: column;
-            width: 20vw;
-            padding: 30px;
-            border-radius: 20px;
+            padding: 10px;
 
-            article{
-                display: flex;
-                flex-direction: column;
-                padding: 10px;
-
-                label{
-                    padding-bottom: 10px;
-                }
+            label {
+                padding-bottom: 10px;
             }
-            section {
-                padding: 10px;
-                
-                input{
-                    margin: 0 auto;
-                }
+        }
+
+        section {
+            padding: 10px;
+
+            input {
+                margin: 0 auto;
             }
         }
     }
+}
