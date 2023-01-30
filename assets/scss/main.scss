@@ -1,14 +1,44 @@
-h1{
+h1 {
     color: green;
 }
-html{
-    max-width: 1440px;
-    margin: auto auto;
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+    html {
+        max-width: 1440px;
+        margin:  auto;
+        display: flex;
+        justify-content: center;
 
-form{
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
-}
-}
+padding-top: 20vh;
+
+        form {
+            background-color: orange;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+            padding: 30px;
+            border-radius: 20px;
+
+            article{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+
+                label{
+                    padding-bottom: 10px;
+                }
+            }
+            section {
+                padding: 10px;
+                
+                input{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
