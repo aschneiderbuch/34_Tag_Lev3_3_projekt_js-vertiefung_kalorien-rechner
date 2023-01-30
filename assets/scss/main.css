@@ -1,3 +1,13 @@
 h1 {
   color: green;
+}
+
+html {
+  max-width: 1440px;
+  margin: auto auto;
+}
+html form {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
 }/*# sourceMappingURL=main.css.map */
